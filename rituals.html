@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rituals Access</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .rituals-form { max-width: 400px; margin: 80px auto; background: #243B60; padding: 2rem; border-radius: 8px; }
+        .rituals-form label { color: #FFD700; font-weight: bold; }
+        .rituals-form input[type="password"] { width: 100%; padding: 10px; margin-top: 8px; border-radius: 5px; border: none; margin-bottom: 20px; }
+        .rituals-form button { background: #FFD700; color: #0D1F2D; font-weight: bold; border: none; border-radius: 5px; padding: 10px 20px; cursor: pointer; }
+        .rituals-form button:hover { background: #E0C100; }
+        .rituals-form .error { color: #FFD700; background: #1E3A5F; padding: 8px; border-radius: 4px; margin-bottom: 10px; }
+        .back-to-home { display:inline-block;margin-bottom:24px;padding:8px 18px;background:#1A2A47;color:#FFD700;border-radius:5px;text-decoration:none;font-weight:bold;box-shadow:0 2px 6px #0002;transition:background 0.2s; }
+        .back-to-home:hover { background: #243B60; }
+    </style>
+</head>
+<body>
+    <main>
+        <form class="rituals-form" id="ritualsForm" autocomplete="off">
+            <h2>Enter Rituals Password</h2>
+            <div id="rituals-error" class="error" style="display:none;"></div>
+            <label for="rituals-password">Password:</label>
+            <input type="password" id="rituals-password" name="rituals-password" required autofocus>
+            <button type="submit">Access</button>
+        </form>
+    </main>
+    <script>
+    document.getElementById('ritualsForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var pass = document.getElementById('rituals-password').value.trim();
+        var errorDiv = document.getElementById('rituals-error');
+        const passLower = pass.toLowerCase();
+        if(passLower === 'boaz') {
+            window.location.href = 'ritual1.html';
+        } else if(pass === 'boaz2') {
+            window.location.href = 'ritual2.html';
+        } else if(pass === 'boaz3') {
+            window.location.href = 'ritual3.html';
+        } else {
+            errorDiv.textContent = 'Incorrect password.';
+            errorDiv.style.display = 'block';
+            document.getElementById('rituals-password').value = '';
+        }
+    });
+    </script>
+</body>
+</html>

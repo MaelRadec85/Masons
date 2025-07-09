@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    line-height: 1.6;
+    background-color: #0D1F2D;
+    color: #FFFFFF;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+
+/* Header & Navigation */
+header {
+    background-color: #1E3A5F;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+nav ul li a:hover {
+    color: #FFFFFF;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFD700;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.02em;
+}
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: url('thistle-pattern.png') center/cover no-repeat, #243B60;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+}
+
+/* Centered Content */
+section {
+    text-align: center;
+    padding: 40px;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 40px;
+    background-color: #162A47;
+}
+.faq-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #243B60;
+    border-radius: 5px;
+}
+.faq-question {
+    cursor: pointer;
+    font-weight: bold;
+    color: #FFD700;
+}
+.faq-answer {
+    display: none;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+.faq-answer.visible {
+    display: block;
+}
+
+/* Membership Section */
+.membership {
+    padding: 40px;
+    background-color: #0D1F2D;
+}
+form {
+    background: #243B60;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form label {
+    color: #FFD700;
+    font-weight: bold;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+button {
+    background: #FFD700;
+    color: #0D1F2D;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+button:hover {
+    background: #E0C100;
+}
+
+/* Contact Section */
+.contact {
+    padding: 40px;
+    background-color: #162A47;
+}
+.map iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Lodge grid */
+.lodges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.lodge-card {
+    background: #243B60;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    padding: 2rem;
+    color: #FFD700;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+.lodge-card h3 {
+    color: #FFD700;
+}
+.lodge-card details {
+    color: #FFFFFF;
+}
+.lodge-card ul, .lodge-card p, .lodge-card h4, .lodge-card h5 {
+    color: #FFFFFF;
+}
+
+/* Education section */
+.education-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.secure-link {
+    text-decoration: none;
+    color: #FFD700;
+    padding: 0.5rem 1rem;
+    border: 1px solid #FFD700;
+    border-radius: 4px;
+    text-align: center;
+    background: #162A47;
+    transition: background 0.3s, color 0.3s;
+}
+.secure-link:hover {
+    background: #1E3A5F;
+    color: #FFD700;
+}
+
+/* Contact form */
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #243B60;
+    padding: 20px;
+    border-radius: 5px;
+}
+#contact-form input, #contact-form textarea {
+    background: #162A47;
+    color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+#contact-form button {
+    background: #FFD700;
+    color: #0D1F2D;
+    font-weight: bold;
+}
+#contact-form button:hover {
+    background: #E0C100;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background-color: #1E3A5F;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #FFD700;
+}
+.social-links {
+    margin-bottom: 1rem;
+}
+.social-link {
+    margin: 0 1rem;
+    color: #FFD700;
+    text-decoration: none;
+}
+
+/* Back to Menu Arrow */
+.back-to-menu {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #FFD700;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-links, nav ul {
+        display: none;
+    }
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    .lodge-card {
+        padding: 1rem;
+    }
+    section {
+        padding: 20px;
+    }
+}
+

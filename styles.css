@@ -7,14 +7,14 @@
 }
 
 body {
-    font-family: 'Merriweather', serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #0D1F2D;
     color: #FFFFFF;
 }
 
 h1 {
-    font-family: Arial, sans-serif;
+    font-family: 'Merriweather', serif;
     font-weight: 700;
     letter-spacing: 0.02em;
 }

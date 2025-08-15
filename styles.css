@@ -9,8 +9,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #0D1F2D;
-    color: #FFFFFF;
+    background: #145A32;
+    color: #FFD600;
 }
 
 h1 {
@@ -22,7 +22,7 @@ h1 {
 
 /* Header & Navigation */
 header {
-    background-color: #1E3A5F;
+    background-color: #145A32;
     padding: 15px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -40,7 +40,7 @@ nav ul li {
     margin: 0 15px;
 }
 nav ul li a {
-    color: #FFD700;
+    color: #FFD600;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
@@ -51,7 +51,7 @@ nav ul li a:hover {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #FFD700;
+    color: #FFD600;
     font-family: Arial, sans-serif;
     letter-spacing: 0.02em;
 }
@@ -61,11 +61,11 @@ nav ul li a:hover {
 .hero {
     text-align: center;
     padding: 50px;
-    background: url('thistle-pattern.png') center/cover no-repeat, #243B60;
+    background: url('thistle-pattern.png') center/cover no-repeat, #008000;
 }
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    color: #FFFFFF;
+    color: #FFD600;
     font-family: 'Merriweather', serif;
 }
 
@@ -78,22 +78,22 @@ section {
 /* FAQ Section */
 .faq {
     padding: 40px;
-    background-color: #162A47;
+    background-color: #FFD600;
 }
 .faq-item {
     margin-bottom: 15px;
     padding: 10px;
-    background: #243B60;
+    background: #145A32;
     border-radius: 5px;
 }
 .faq-question {
     cursor: pointer;
     font-weight: bold;
-    color: #FFD700;
+    color: #FFD600;
 }
 .faq-answer {
     display: none;
-    color: #FFFFFF;
+    color: #FFD600;
     margin-top: 10px;
 }
 .faq-answer.visible {
@@ -103,10 +103,10 @@ section {
 /* Membership Section */
 .membership {
     padding: 40px;
-    background-color: #0D1F2D;
+    background-color: #FFD600;
 }
 form {
-    background: #243B60;
+    background: #145A32;
     padding: 20px;
     border-radius: 5px;
     display: flex;
@@ -114,7 +114,7 @@ form {
     align-items: center;
 }
 form label {
-    color: #FFD700;
+    color: #FFD600;
     font-weight: bold;
 }
 form input, form textarea {
@@ -125,8 +125,8 @@ form input, form textarea {
     border-radius: 5px;
 }
 button {
-    background: #FFD700;
-    color: #0D1F2D;
+    background: #50C878;
+    color: #FFD600;
     padding: 10px 15px;
     border: none;
     cursor: pointer;
@@ -134,13 +134,13 @@ button {
     border-radius: 5px;
 }
 button:hover {
-    background: #E0C100;
+    background: #50C878;
 }
 
 /* Contact Section */
 .contact {
     padding: 40px;
-    background-color: #162A47;
+    background-color: #FFD600;
 }
 .map iframe {
     width: 100%;
@@ -157,22 +157,46 @@ button:hover {
     margin-top: 2rem;
 }
 .lodge-card {
-    background: #243B60;
+    background: #206040;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.15);
     padding: 2rem;
-    color: #FFD700;
+    color: #FFD600;
     margin-bottom: 1.5rem;
     text-align: left;
 }
+
+/* Gallery grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+    justify-items: center;
+}
+.gallery-grid img {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    transition: transform 0.25s, box-shadow 0.25s;
+    cursor: pointer;
+}
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+}
+
 .lodge-card h3 {
-    color: #FFD700;
+    color: #FFD600;
 }
 .lodge-card details {
-    color: #FFFFFF;
+    color: #FFD600;
 }
 .lodge-card ul, .lodge-card p, .lodge-card h4, .lodge-card h5 {
-    color: #FFFFFF;
+    color: #FFD600;
 }
 
 /* Education section */
@@ -184,47 +208,67 @@ button:hover {
 }
 .secure-link {
     text-decoration: none;
-    color: #FFD700;
+    color: #FFD600;
     padding: 0.5rem 1rem;
-    border: 1px solid #FFD700;
+    border: 1px solid #F7DC6F;
     border-radius: 4px;
     text-align: center;
-    background: #162A47;
+    background: #145A32;
     transition: background 0.3s, color 0.3s;
 }
 .secure-link:hover {
-    background: #1E3A5F;
-    color: #FFD700;
+    background: #50C878;
+    color: #FFD600;
 }
 
 /* Contact form */
 .contact-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0;
+    padding: 0;
 }
 #contact-form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background: #243B60;
-    padding: 20px;
-    border-radius: 5px;
+    background: #206040;
+    padding: 32px 28px;
+    border-radius: 8px;
+    color: #FFD600;
+    max-width: 500px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    align-items: center;
 }
 #contact-form input, #contact-form textarea {
-    background: #162A47;
-    color: #FFD700;
-    border: none;
+    background: #145A32;
+    color: #FFD600;
+    border: 1.5px solid #FFD600;
     border-radius: 5px;
     padding: 10px;
+    width: 100%;
+    font-size: 1rem;
 }
 #contact-form button {
-    background: #FFD700;
-    color: #0D1F2D;
+    background: #206040;
+    color: #FFD600;
+    border: 2px solid #FFD600;
     font-weight: bold;
+    border-radius: 6px;
+    padding: 10px 30px;
+    font-size: 1.1em;
+    transition: background 0.2s, color 0.2s;
 }
 #contact-form button:hover {
-    background: #E0C100;
+    background: #FFD600;
+    color: #206040;
+    border: 2px solid #FFD600;
+}
+#contact-form button:hover {
+    background: #50C878;
 }
 
 textarea {
@@ -234,18 +278,18 @@ textarea {
 
 /* Footer */
 footer {
-    background-color: #1E3A5F;
+    background-color: #145A32;
     padding: 15px;
     text-align: center;
     font-size: 14px;
-    color: #FFD700;
+    color: #FFD600;
 }
 .social-links {
     margin-bottom: 1rem;
 }
 .social-link {
     margin: 0 1rem;
-    color: #FFD700;
+    color: #FFD600;
     text-decoration: none;
 }
 
@@ -254,7 +298,7 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #FFD700;
+    background: #145A32;
     padding: 10px 15px;
     border-radius: 50%;
     text-decoration: none;

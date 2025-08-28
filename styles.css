@@ -293,6 +293,175 @@ footer {
     text-decoration: none;
 }
 
+/* General Talks Page Styles */
+details.talk-details,
+details.faq-details {
+    margin: 1em 0;
+    border: 1px solid #FFD700;
+    border-radius: 6px;
+    overflow: hidden;
+    background: rgba(20, 90, 50, 0.7);
+    transition: all 0.3s ease;
+}
+
+details.talk-details[open],
+details.faq-details[open] {
+    background: rgba(20, 90, 50, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+details.talk-details summary,
+details.faq-details summary {
+    padding: 1em;
+    background: #145A32;
+    color: #FFD700;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Merriweather', serif;
+    font-size: 1.1em;
+    outline: none;
+    position: relative;
+    list-style: none;
+    transition: background-color 0.2s ease;
+}
+
+details.talk-details summary:hover,
+details.faq-details summary:hover {
+    background: #1a6f3d;
+}
+
+details.talk-details summary::-webkit-details-marker,
+details.faq-details summary::-webkit-details-marker {
+    display: none;
+}
+
+details.talk-details summary::after,
+details.faq-details summary::after {
+    content: '▼';
+    position: absolute;
+    right: 1em;
+    transition: transform 0.3s ease;
+    color: #FFD700;
+}
+
+details.talk-details[open] > summary::after,
+details.faq-details[open] > summary::after {
+    transform: rotate(180deg);
+}
+
+.talk-content,
+.faq-content {
+    padding: 1.5em;
+    color: #f0f0f0;
+    line-height: 1.7;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.talk-content p,
+.faq-content p {
+    margin-bottom: 1em;
+}
+
+.talk-content ul,
+.faq-content ul,
+.talk-content ol,
+.faq-content ol {
+    margin: 1em 0 1em 2em;
+}
+
+.talk-content li,
+.faq-content li {
+    margin-bottom: 0.5em;
+}
+
+.talk-content strong,
+.faq-content strong {
+    color: #FFD700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .talk-content,
+    .faq-content {
+        padding: 1em;
+    }
+    
+    details.talk-details summary,
+    details.faq-details summary {
+        padding: 0.8em 2.5em 0.8em 1em;
+        font-size: 1em;
+    }
+}
+
+.talk-card {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-left: 4px solid #FFD700;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.talk-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.talk-card h3 {
+    color: #FFD700;
+    margin-bottom: 15px;
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+}
+
+.talk-card p, .talk-card ul, .talk-card ol {
+    margin-bottom: 15px;
+    color: #f0f0f0;
+    line-height: 1.8;
+}
+
+.talk-card ul, .talk-card ol {
+    padding-left: 25px;
+}
+
+.talk-card li {
+    margin-bottom: 10px;
+}
+
+.talk-card strong {
+    color: #FFD700;
+}
+
+.faq-item {
+    background: rgba(20, 90, 50, 0.7);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    color: #FFD700;
+    margin-bottom: 15px;
+    font-family: 'Merriweather', serif;
+    font-size: 1.3rem;
+}
+
+.faq-item p, .faq-item ul, .faq-item ol {
+    color: #f0f0f0;
+    line-height: 1.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .talk-card, .faq-item {
+        padding: 15px;
+    }
+    
+    .talk-card h3, .faq-item h3 {
+        font-size: 1.2rem;
+    }
+}
+
 /* Back to Menu Arrow */
 .back-to-menu {
     position: fixed;
